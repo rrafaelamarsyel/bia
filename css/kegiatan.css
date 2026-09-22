@@ -135,7 +135,7 @@
 
 .acara-card img {
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     transition: transform 600ms ease;
 }
@@ -149,7 +149,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 70px 24px 26px;
+    padding: 54px 24px 22px;
     background: linear-gradient(to top, rgba(36, 71, 58, 0.95), transparent);
 }
 
@@ -168,15 +168,15 @@
 
 .acara-card figcaption h3 {
     color: var(--color-cream);
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 6px;
 }
 
 .acara-card figcaption p {
     color: var(--color-cream);
     opacity: 0.9;
-    font-size: 14px;
-    line-height: 1.55;
+    font-size: 13.5px;
+    line-height: 1.5;
 }
 
 .acara-baca {
@@ -240,7 +240,7 @@
 }
 
 .rutin-carousel .carousel-slide {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 10;
 }
 
 .rutin-body {
@@ -585,10 +585,6 @@
         max-width: 620px;
         margin: 0 auto;
     }
-
-    .rutin-carousel .carousel-slide {
-        aspect-ratio: 16 / 10;
-    }
 }
 
 @media (max-width: 700px) {
@@ -601,12 +597,8 @@
         grid-template-columns: 1fr;
     }
 
-    .acara-card img {
-        aspect-ratio: 4 / 3;
-    }
-
     .acara-card figcaption {
-        padding: 50px 20px 20px;
+        padding: 40px 20px 18px;
     }
 
     .acara-modal-body {

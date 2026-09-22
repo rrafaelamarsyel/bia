@@ -68,14 +68,33 @@
 }
 
 .panduan-home {
-    padding: 40px 24px 20px;
+    padding: 90px 24px 100px;
+}
+
+.panduan-card {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 52px;
 }
 
 .panduan-grid {
     display: grid;
-    grid-template-columns: minmax(240px, 300px) 1fr;
-    gap: 56px;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
     align-items: center;
+}
+
+.panduan-video {
+    display: flex;
+    justify-content: center;
+}
+
+.panduan-video .video-frame {
+    width: 100%;
+    max-width: 240px;
 }
 
 .panduan-info {
@@ -86,12 +105,13 @@
 }
 
 .panduan-info h2 {
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .panduan-info > p {
     opacity: 0.82;
-    max-width: 56ch;
+    max-width: 52ch;
+    font-size: 14.5px;
 }
 
 .panduan-langkah {
@@ -100,10 +120,8 @@
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    max-width: 460px;
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
     padding: 20px 22px;
 }
 
@@ -149,9 +167,8 @@
 }
 
 @media (max-width: 800px) {
-    .panduan-home {
-        padding-left: 20px;
-        padding-right: 20px;
+    .panduan-card {
+        padding: 32px 24px;
     }
 
     .panduan-grid {
@@ -159,22 +176,26 @@
         gap: 32px;
     }
 
-    .panduan-video {
-        max-width: 320px;
-        width: 100%;
-        margin: 0 auto;
+    .panduan-video .video-frame {
+        max-width: 220px;
     }
 
     .panduan-info {
         align-items: stretch;
     }
 
-    .panduan-langkah {
-        max-width: none;
-    }
-
     .panduan-aksi .btn {
         flex: 1 1 100%;
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .panduan-home {
+        padding: 60px 20px 70px;
+    }
+
+    .panduan-card {
+        padding: 26px 20px;
     }
 }

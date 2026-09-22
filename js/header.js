@@ -18,7 +18,19 @@ const targetReveal = [
     ".form-card",
     ".form-note",
     ".jadwal-head",
-    ".keg-head"
+    ".keg-head",
+    ".quick-card",
+    ".panduan-card",
+    ".testimoni-card",
+    ".cta-banner-inner",
+    ".tt-hero-text",
+    ".tt-hero-media",
+    ".tt-story-text",
+    ".tt-story-media",
+    ".tt-habit-card",
+    ".tt-timeline li",
+    ".tt-mentors-head",
+    ".tt-cta"
 ].join(", ");
 
 function initNavbar() {
