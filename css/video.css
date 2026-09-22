@@ -1,0 +1,180 @@
+.video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--color-forest-dark);
+    box-shadow: var(--shadow-soft);
+}
+
+.video-frame video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.video-frame.is-siap video {
+    opacity: 1;
+}
+
+.video-kosong {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 24px;
+    text-align: center;
+    color: var(--color-cream);
+    transition: opacity 500ms ease;
+}
+
+.video-kosong p {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.video-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: var(--color-sage);
+    color: var(--color-forest-dark);
+    font-size: 20px;
+    padding-left: 4px;
+}
+
+.video-frame.is-siap .video-kosong {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.video-caption {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 13.5px;
+    opacity: 0.75;
+}
+
+.panduan-home {
+    padding: 40px 24px 20px;
+}
+
+.panduan-grid {
+    display: grid;
+    grid-template-columns: minmax(240px, 300px) 1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.panduan-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.panduan-info h2 {
+    font-size: 30px;
+}
+
+.panduan-info > p {
+    opacity: 0.82;
+    max-width: 56ch;
+}
+
+.panduan-langkah {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 460px;
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: 20px 22px;
+}
+
+.panduan-langkah li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.panduan-langkah li > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-forest);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.panduan-langkah li:nth-child(2) > span {
+    background-color: var(--color-coral);
+}
+
+.panduan-langkah p {
+    font-size: 14.5px;
+    line-height: 1.5;
+}
+
+.panduan-langkah strong {
+    font-family: var(--font-heading);
+    color: var(--color-forest);
+}
+
+.panduan-aksi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (max-width: 800px) {
+    .panduan-home {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .panduan-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .panduan-video {
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .panduan-info {
+        align-items: stretch;
+    }
+
+    .panduan-langkah {
+        max-width: none;
+    }
+
+    .panduan-aksi .btn {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+}
