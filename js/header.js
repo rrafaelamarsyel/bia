@@ -1,36 +1,28 @@
 const targetReveal = [
     ".why-card",
-    ".vm-card",
-    ".about-text",
-    ".about-image",
-    ".acara-card",
-    ".rutin-card",
-    ".alur-minggu",
-    ".video-frame",
-    ".gedung-foto",
-    ".table-wrap",
-    ".lokasi-card",
-    ".info-board",
-    ".faq-item",
-    ".gabung-box",
-    ".pembimbing-wrap",
-    ".pembimbing-section .center",
-    ".form-card",
-    ".form-note",
-    ".jadwal-head",
-    ".keg-head",
     ".quick-card",
     ".panduan-card",
     ".testimoni-card",
     ".cta-banner-inner",
-    ".tt-hero-text",
-    ".tt-hero-media",
+    ".tt-misi-card",
     ".tt-story-text",
     ".tt-story-media",
     ".tt-habit-card",
-    ".tt-timeline li",
+    ".tt-flow-item",
     ".tt-mentors-head",
-    ".tt-cta"
+    ".pembimbing-card",
+    ".tt-cta",
+    ".acara-card",
+    ".rutin-card",
+    ".rute-card",
+    ".table-wrap",
+    ".lokasi-card",
+    ".info-board",
+    ".faq-item",
+    ".form-card",
+    ".form-note",
+    ".jadwal-head",
+    ".keg-head"
 ].join(", ");
 
 function initNavbar() {
@@ -74,7 +66,6 @@ function initNavbar() {
 
 function pasangScrollNavbar() {
     const navbar = document.getElementById("navbar");
-
     if (!navbar) return;
 
     const cekScroll = () => {
@@ -140,7 +131,25 @@ function pasangTransisiHalaman() {
     });
 }
 
+function pasangSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", event => {
+            const targetId = link.getAttribute("href");
+
+            if (targetId === "#") return;
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+                event.preventDefault();
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+}
+
 initNavbar();
 pasangScrollNavbar();
 pasangReveal();
 pasangTransisiHalaman();
+pasangSmoothScroll();

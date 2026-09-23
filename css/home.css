@@ -1,34 +1,149 @@
-.pilihan-saya-mau .center {
-    max-width: 560px;
-    margin: 0 auto 36px;
+.quick-section {
+    padding: 90px 24px;
 }
 
-.pilihan-saya-mau .center p {
-    opacity: 0.8;
-    font-size: 14.5px;
-    margin-top: 8px;
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.quick-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: var(--color-cream);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 26px 22px;
+    box-shadow: var(--shadow-soft);
+    transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+.quick-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.quick-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-soft);
+}
+
+.quick-icon svg {
+    width: 22px;
+    height: 22px;
+    color: var(--color-forest);
+}
+
+.quick-card:nth-child(2) .quick-icon svg { color: var(--color-coral); }
+.quick-card:nth-child(3) .quick-icon svg { color: var(--color-forest-dark); }
+
+.quick-card h3 {
+    font-size: 16px;
+}
+
+.quick-card p {
+    font-size: 13.5px;
+    opacity: 0.75;
+    line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+    .quick-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
-    .quick-grid {
-        grid-template-columns: 1fr;
-    }
+    .quick-grid { grid-template-columns: 1fr; }
+}
+
+.panduan-home {
+    padding: 20px 24px 100px;
+}
+
+.panduan-card {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    background-color: var(--color-cream);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 52px;
+    box-shadow: var(--shadow-soft);
+}
+
+.panduan-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.panduan-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.panduan-video .video-frame { width: 100%; max-width: 240px; box-shadow: var(--shadow-hover); }
+
+.panduan-info { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.panduan-info h2 { font-size: 28px; }
+.panduan-info > p { opacity: 0.82; max-width: 52ch; font-size: 14.5px; }
+
+.panduan-langkah {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    background-color: var(--color-white);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    box-shadow: var(--shadow-soft);
+}
+
+.panduan-langkah li { display: flex; align-items: center; gap: 14px; }
+
+.panduan-langkah li > span {
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; width: 32px; height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-forest);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.panduan-langkah li:nth-child(2) > span { background-color: var(--color-coral); }
+.panduan-langkah p { font-size: 14.5px; line-height: 1.5; }
+.panduan-langkah strong { font-family: var(--font-heading); color: var(--color-forest); }
+
+.panduan-aksi { display: flex; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 800px) {
+    .panduan-card { padding: 32px 24px; }
+    .panduan-grid { grid-template-columns: 1fr; gap: 32px; }
+    .panduan-video .video-frame { max-width: 220px; }
+    .panduan-info { align-items: stretch; }
+    .panduan-aksi .btn { flex: 1 1 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .panduan-home { padding: 0 20px 70px; }
+    .panduan-card { padding: 26px 20px; }
 }
 
 .testimoni {
-    padding: 80px 24px;
-    background-color: var(--color-white);
-}
-
-.testimoni .center {
-    max-width: 560px;
-    margin: 0 auto 40px;
-}
-
-.testimoni .center p {
-    opacity: 0.8;
-    font-size: 14.5px;
-    margin-top: 8px;
+    padding: 30px 24px 90px;
 }
 
 .testimoni-grid {
@@ -40,47 +155,47 @@
 }
 
 .testimoni-card {
-    background-color: var(--color-cream);
+    background-color: var(--color-white);
+    border: 1.5px solid var(--color-border);
     border-radius: var(--radius-md);
-    padding: 28px 26px;
+    padding: 30px 26px;
     box-shadow: var(--shadow-soft);
+    transition: box-shadow 200ms ease;
 }
 
-.testimoni-mark {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 34px;
-    font-weight: 700;
-    color: var(--color-coral);
-    line-height: 1;
-    margin-bottom: 8px;
+.testimoni-card:hover {
+    box-shadow: var(--shadow-hover);
 }
 
-.testimoni-card p {
+.testimoni-stars { color: var(--color-coral); font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+
+.testimoni-card p.testimoni-teks {
     font-size: 14.5px;
     line-height: 1.7;
     opacity: 0.88;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-.testimoni-nama {
+.testimoni-orang { display: flex; align-items: center; gap: 12px; }
+
+.testimoni-avatar {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background-color: var(--color-sage);
+    color: var(--color-forest-dark);
+    display: flex; align-items: center; justify-content: center;
     font-family: var(--font-heading);
     font-weight: 700;
-    color: var(--color-forest);
-    font-size: 14px;
+    font-size: 15px;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-soft);
 }
 
-.testimoni-peran {
-    font-size: 12.5px;
-    opacity: 0.65;
-}
+.testimoni-nama { font-family: var(--font-heading); font-weight: 700; color: var(--color-forest); font-size: 14px; }
+.testimoni-peran { font-size: 12.5px; opacity: 0.6; }
 
 @media (max-width: 860px) {
-    .testimoni-grid {
-        grid-template-columns: 1fr;
-        max-width: 460px;
-        margin: 0 auto;
-    }
+    .testimoni-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
 }
 
 .cta-banner {
@@ -99,78 +214,30 @@
     border-radius: var(--radius-lg);
     padding: 48px 52px;
     overflow: hidden;
+    box-shadow: var(--shadow-hover);
 }
 
 .cta-banner-inner::after {
     content: "";
     position: absolute;
-    right: -40px;
-    top: -60px;
-    width: 200px;
-    height: 200px;
+    right: -40px; top: -60px;
+    width: 200px; height: 200px;
     border-radius: 50%;
     background-color: var(--color-forest-dark);
     opacity: 0.5;
 }
 
-.cta-banner-text {
-    position: relative;
-    z-index: 1;
-}
-
-.cta-banner-text h2 {
-    color: var(--color-cream);
-    font-size: 26px;
-    margin-bottom: 8px;
-}
-
-.cta-banner-text p {
-    color: var(--color-cream);
-    opacity: 0.85;
-    font-size: 14.5px;
-    max-width: 46ch;
-}
+.cta-banner-text { position: relative; z-index: 1; }
+.cta-banner-text h2 { color: var(--color-cream); font-size: 26px; margin-bottom: 8px; }
+.cta-banner-text p { color: var(--color-cream); opacity: 0.85; font-size: 14.5px; max-width: 46ch; }
 
 .cta-banner-aksi {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    flex-shrink: 0;
-}
-
-.cta-banner-aksi .btn-primary {
-    background-color: var(--color-coral);
-}
-
-.cta-banner-aksi .btn-primary:hover {
-    background-color: #c56d55;
-}
-
-.cta-banner-aksi .btn-outline {
-    border-color: var(--color-cream);
-    color: var(--color-cream);
-}
-
-.cta-banner-aksi .btn-outline:hover {
-    background-color: var(--color-cream);
-    color: var(--color-forest-dark);
+    position: relative; z-index: 1;
+    display: flex; flex-wrap: wrap; gap: 12px; flex-shrink: 0;
 }
 
 @media (max-width: 760px) {
-    .cta-banner-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 36px 28px;
-    }
-
-    .cta-banner-aksi {
-        width: 100%;
-    }
-
-    .cta-banner-aksi .btn {
-        flex: 1 1 100%;
-        justify-content: center;
-    }
+    .cta-banner-inner { flex-direction: column; align-items: flex-start; padding: 36px 28px; }
+    .cta-banner-aksi { width: 100%; }
+    .cta-banner-aksi .btn { flex: 1 1 100%; justify-content: center; }
 }

@@ -41,9 +41,7 @@ if (pembimbingClose) {
 
 if (pembimbingOverlay) {
     pembimbingOverlay.addEventListener("click", (e) => {
-        if (e.target === pembimbingOverlay) {
-            tutupPembimbing();
-        }
+        if (e.target === pembimbingOverlay) tutupPembimbing();
     });
 }
 

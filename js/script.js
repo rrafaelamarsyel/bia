@@ -48,11 +48,14 @@ function bukaModal(kategori) {
     kategoriAktif = kategori;
     indexAktif = 0;
     tampilkanFoto();
+    overlay.dataset.category = kategori;
     overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
 }
 
 function tutupModal() {
     overlay.classList.remove("active");
+    document.body.style.overflow = "";
 }
 
 function fotoBerikutnya() {
@@ -68,9 +71,7 @@ function fotoSebelumnya() {
 }
 
 document.querySelectorAll(".why-card").forEach(card => {
-    card.addEventListener("click", () => {
-        bukaModal(card.dataset.category);
-    });
+    card.addEventListener("click", () => bukaModal(card.dataset.category));
 });
 
 if (btnClose) btnClose.addEventListener("click", tutupModal);
@@ -79,9 +80,7 @@ if (btnPrev) btnPrev.addEventListener("click", fotoSebelumnya);
 
 if (overlay) {
     overlay.addEventListener("click", (e) => {
-        if (e.target === overlay) {
-            tutupModal();
-        }
+        if (e.target === overlay) tutupModal();
     });
 }
 
@@ -90,56 +89,6 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") tutupModal();
     if (e.key === "ArrowRight") fotoBerikutnya();
     if (e.key === "ArrowLeft") fotoSebelumnya();
-});
-
-async function loadComponent(selector, file) {
-    const element = document.querySelector(selector);
-    if (!element) return;
-
-    const response = await fetch(file + "?v=" + Date.now(), { cache: "no-store" });
-    element.innerHTML = await response.text();
-}
-
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
-
-if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener("click", () => {
-    const isOpen = mobileMenu.classList.toggle("open");
-    menuToggle.classList.toggle("active", isOpen);
-    menuToggle.setAttribute("aria-expanded", isOpen);
-    });
-
-
-    mobileMenu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            mobileMenu.classList.remove("open");
-            menuToggle.classList.remove("active");
-            menuToggle.setAttribute("aria-expanded", "false");
-        });
-    });
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-link.addEventListener("click", event => {
-    const targetId = link.getAttribute("href");
-
-
-        if (targetId === "#") {
-            return;
-        }
-
-        const target = document.querySelector(targetId);
-
-        if (target) {
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
-    });
 });
 
 const heroSlides = document.querySelectorAll(".hero-slide");
@@ -153,17 +102,3 @@ if (heroSlides.length > 1) {
         heroSlides[heroSlideIndex].classList.add("active");
     }, 5000);
 }
-
-document.querySelectorAll(".video-frame").forEach(bingkai => {
-    const video = bingkai.querySelector("video");
-
-    if (!video) return;
-
-    const tandaiSiap = () => bingkai.classList.add("is-siap");
-
-    if (video.readyState >= 1) {
-        tandaiSiap();
-    } else {
-        video.addEventListener("loadedmetadata", tandaiSiap);
-    }
-});

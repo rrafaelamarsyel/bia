@@ -1,59 +1,52 @@
-.page-banner {
+.daftar-section {
     position: relative;
-    padding: 168px 24px 70px;
-    background-color: var(--color-forest);
-    text-align: center;
+    padding: 150px 24px 100px;
+    background-image:
+        linear-gradient(rgba(255, 249, 237, 0.88), rgba(255, 249, 237, 0.92)),
+        url('../assets/bir/bir-kelas.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     overflow: hidden;
 }
 
-.page-banner::after {
+.daftar-section::before {
     content: "";
     position: absolute;
-    right: -60px;
-    top: -60px;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    background-color: var(--color-forest-dark);
-    opacity: 0.5;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 1000px;
+    max-width: 140vw;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.55), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
 }
 
-.page-banner .container {
+.daftar-section .container {
     position: relative;
     z-index: 1;
 }
 
-.page-banner span.eyebrow {
-    display: inline-block;
-    background-color: var(--color-sage);
-    color: var(--color-forest-dark);
-    font-weight: 600;
-    font-size: 13px;
-    padding: 6px 16px;
-    border-radius: 999px;
-    margin-bottom: 18px;
+.daftar-section .section-title {
+    color: var(--color-forest);
 }
 
-.page-banner h1 {
-    color: var(--color-cream);
-    font-size: 36px;
-    margin-bottom: 14px;
-}
-
-.page-banner p {
-    color: var(--color-cream);
+.daftar-section .section-head p {
+    color: var(--color-forest);
     opacity: 0.85;
-    max-width: 520px;
-    margin: 0 auto;
-    font-size: 15px;
 }
 
-.daftar-section {
-    padding: 70px 24px 100px;
+@media (max-width: 640px) {
+    .daftar-section { padding: 130px 20px 70px; }
+    .form-card { padding: 32px 22px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
 }
 
 .form-intro {
-    margin-bottom: 26px;
+    max-width: 720px;
+    margin: 0 auto 26px;
     font-size: 14.5px;
     opacity: 0.8;
     line-height: 1.7;
@@ -62,49 +55,34 @@
 .form-card {
     max-width: 720px;
     margin: 0 auto;
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
+    border: 1.5px solid var(--color-border);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-soft);
     padding: 44px 40px;
+    box-shadow: var(--shadow-soft);
 }
 
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.form-group {
-    margin-bottom: 22px;
-}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { margin-bottom: 22px; }
 
 .form-group label {
-    display: block;
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--color-forest);
-    margin-bottom: 8px;
+    display: block; font-weight: 600; font-size: 14px;
+    color: var(--color-forest); margin-bottom: 8px;
 }
 
-.form-group .optional-tag {
-    font-weight: 400;
-    opacity: 0.6;
-    font-size: 12.5px;
-}
+.form-group .optional-tag { font-weight: 400; opacity: 0.6; font-size: 12.5px; }
 
 .form-group input[type="text"],
 .form-group input[type="number"],
 .form-group select,
 .form-group textarea {
-    width: 100%;
-    font-family: var(--font-body);
-    font-size: 14.5px;
+    width: 100%; font-family: var(--font-body); font-size: 14.5px;
     color: var(--color-dark);
-    background-color: var(--color-cream);
-    border: 1px solid rgba(35, 75, 50, 0.15);
-    border-radius: 10px;
-    padding: 12px 14px;
-    transition: border-color 180ms ease, background-color 180ms ease;
+    background-color: var(--color-white);
+    border: 1.5px solid var(--color-border);
+    border-radius: 10px; padding: 12px 14px;
+    box-shadow: inset 0 1px 3px rgba(41, 39, 34, 0.06);
+    transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .form-group input:focus,
@@ -112,115 +90,58 @@
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-forest);
-    background-color: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(49, 91, 75, 0.14);
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 90px;
-}
-
-.form-group select:disabled {
-    opacity: 0.55;
-    cursor: not-allowed;
-}
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-group select:disabled { opacity: 0.55; cursor: not-allowed; }
 
 .form-section-title {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    color: var(--color-forest);
-    font-size: 16px;
-    margin: 30px 0 18px;
-    padding-top: 22px;
-    border-top: 1px solid rgba(35, 75, 50, 0.1);
+    font-family: var(--font-heading); font-weight: 700; color: var(--color-forest);
+    font-size: 16px; margin: 30px 0 18px; padding-top: 22px;
+    border-top: 1px solid var(--color-border);
 }
 
-.form-section-title:first-of-type {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
-}
+.form-section-title:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
 
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-bottom: 26px;
-}
-
-.checkbox-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 14px;
-    opacity: 0.9;
-}
+.checkbox-group { display: flex; flex-direction: column; gap: 14px; margin-bottom: 26px; }
+.checkbox-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; opacity: 0.9; }
 
 .checkbox-item input[type="checkbox"] {
-    margin-top: 3px;
-    width: 17px;
-    height: 17px;
-    accent-color: var(--color-forest);
-    flex-shrink: 0;
-    cursor: pointer;
+    margin-top: 3px; width: 17px; height: 17px;
+    accent-color: var(--color-forest); flex-shrink: 0; cursor: pointer;
 }
 
-.checkbox-item label {
-    cursor: pointer;
-}
+.checkbox-item label { cursor: pointer; }
 
 .form-submit {
-    width: 100%;
-    justify-content: center;
-    border: none;
-    font-size: 16px;
+    width: 100%; justify-content: center; border: none; font-size: 16px;
 }
 
 .form-note {
-    max-width: 720px;
-    margin: 24px auto 0;
-    background-color: var(--color-sage);
-    color: var(--color-forest-dark);
-    border-radius: var(--radius-md);
-    padding: 18px 22px;
-    font-size: 13.5px;
-    line-height: 1.7;
+    max-width: 720px; margin: 24px auto 0;
+    background-color: var(--color-sage); color: var(--color-forest-dark);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 18px 22px;
+    font-size: 13.5px; line-height: 1.7;
+    box-shadow: var(--shadow-soft);
 }
 
-.form-note a {
-    font-weight: 700;
-    text-decoration: underline;
-}
+.form-note a { font-weight: 700; text-decoration: underline; }
 
 @media (max-width: 640px) {
-    .form-card {
-        padding: 32px 22px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
+    .daftar-section { padding: 130px 20px 70px; }
+    .form-card { padding: 32px 22px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
 }
 
 .form-notif {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
+    position: fixed; bottom: 24px; left: 50%;
     transform: translate(-50%, 20px);
-    background-color: var(--color-forest);
-    color: var(--color-cream);
-    padding: 14px 24px;
-    border-radius: 999px;
-    box-shadow: var(--shadow-soft);
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 250ms ease, transform 250ms ease;
-    z-index: 300;
+    background-color: var(--color-forest); color: var(--color-cream);
+    padding: 14px 24px; border-radius: 999px; box-shadow: var(--shadow-hover);
+    font-size: 14px; font-weight: 600; opacity: 0;
+    transition: opacity 250ms ease, transform 250ms ease; z-index: 300;
 }
 
-.form-notif.show {
-    opacity: 1;
-    transform: translate(-50%, 0);
-}
+.form-notif.show { opacity: 1; transform: translate(-50%, 0); }

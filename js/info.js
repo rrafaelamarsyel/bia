@@ -36,9 +36,7 @@ if (infoOverlay) {
     infoClose.addEventListener("click", tutupInfo);
 
     infoOverlay.addEventListener("click", e => {
-        if (e.target === infoOverlay) {
-            tutupInfo();
-        }
+        if (e.target === infoOverlay) tutupInfo();
     });
 
     document.addEventListener("keydown", e => {
