@@ -1,15 +1,47 @@
-.page-banner { background-position: center; }
+.page-banner {
+    background-position: center;
+}
 
-.keg-head { max-width: 640px; margin-bottom: 36px; }
-.keg-head.center { margin-left: auto; margin-right: auto; text-align: center; }
-.keg-head h2 { font-size: 30px; margin-bottom: 14px; }
-.keg-head p { opacity: 0.82; max-width: 62ch; margin-bottom: 12px; }
-.keg-head.center p { margin-left: auto; margin-right: auto; }
-.keg-head p:last-child { margin-bottom: 0; }
+.keg-head {
+    max-width: 640px;
+    margin-bottom: 36px;
+}
 
-.acara-hero { padding: 84px 24px 90px; }
+.keg-head.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
-.acara-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.keg-head h2 {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.keg-head p {
+    opacity: 0.82;
+    max-width: 62ch;
+    margin-bottom: 12px;
+}
+
+.keg-head.center p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.keg-head p:last-child {
+    margin-bottom: 0;
+}
+
+.acara-hero {
+    padding: 84px 24px 90px;
+}
+
+.acara-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
 
 .acara-card {
     position: relative;
@@ -21,13 +53,26 @@
     transition: box-shadow 250ms ease;
 }
 
-.acara-card:hover { box-shadow: var(--shadow-hover); }
-.acara-card:focus-visible { outline: 3px solid var(--color-coral); outline-offset: 3px; }
+.acara-card:hover {
+    box-shadow: var(--shadow-hover);
+}
 
-.acara-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.acara-card:focus-visible {
+    outline: 3px solid var(--color-coral);
+    outline-offset: 3px;
+}
+
+.acara-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
 
 .acara-card figcaption {
-    position: absolute; left: 0; right: 0; bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     padding: 54px 24px 22px;
     background: linear-gradient(to top, rgba(36, 71, 58, 0.95), transparent);
 }
@@ -36,27 +81,53 @@
     display: inline-block;
     background-color: var(--color-coral);
     color: var(--color-white);
-    font-size: 11.5px; font-weight: 700;
-    letter-spacing: 1px; text-transform: uppercase;
-    padding: 4px 12px; border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 999px;
     margin-bottom: 10px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
-.acara-card figcaption h3 { color: var(--color-cream); font-size: 22px; margin-bottom: 6px; }
-.acara-card figcaption p { color: var(--color-cream); opacity: 0.9; font-size: 13.5px; line-height: 1.5; }
+.acara-card figcaption h3 {
+    color: var(--color-cream);
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.acara-card figcaption p {
+    color: var(--color-cream);
+    opacity: 0.9;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
 
 .acara-baca {
-    display: inline-flex; align-items: center; gap: 6px;
-    margin-top: 12px; padding-bottom: 2px;
-    color: var(--color-cream); font-size: 13px; font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding-bottom: 2px;
+    color: var(--color-cream);
+    font-size: 13px;
+    font-weight: 700;
     border-bottom: 1px solid rgba(255, 249, 237, 0.45);
 }
 
-.rutin-section { padding: 70px 24px 90px; }
-.rutin-section.alt { background-color: var(--color-cream); }
+.rutin-section {
+    padding: 70px 24px 90px;
+}
 
-.rutin-intro { max-width: 640px; margin-bottom: 40px; }
+.rutin-section.alt {
+    background-color: var(--color-cream);
+}
+
+.rutin-intro {
+    max-width: 640px;
+    margin-bottom: 40px;
+}
 
 .rutin-grid {
     display: grid;
@@ -76,12 +147,22 @@
     transition: box-shadow 250ms ease;
 }
 
-.rutin-card:hover { box-shadow: var(--shadow-hover); }
+.rutin-card:hover {
+    box-shadow: var(--shadow-hover);
+}
 
-.rutin-carousel { border-radius: 0; box-shadow: none; }
-.rutin-carousel .carousel-slide { aspect-ratio: 16 / 10; }
+.rutin-carousel {
+    border-radius: 0;
+    box-shadow: none;
+}
 
-.aktivitas-card { cursor: pointer; }
+.rutin-carousel .carousel-slide {
+    aspect-ratio: 16 / 10;
+}
+
+.aktivitas-card {
+    cursor: pointer;
+}
 
 .aktivitas-cover {
     position: relative;
@@ -111,151 +192,321 @@
     font-size: 13.5px;
 }
 
-.rutin-body { flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 22px 22px 26px; }
-.rutin-body h3 { font-size: 21px; }
-.rutin-body p { opacity: 0.82; font-size: 14px; line-height: 1.65; }
+.rutin-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px 22px 26px;
+}
 
-.rutin-meta { display: flex; flex-wrap: wrap; gap: 8px; }
+.rutin-body h3 {
+    font-size: 21px;
+}
+
+.rutin-body p {
+    opacity: 0.82;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.rutin-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
 .rutin-meta span {
-    font-size: 12.5px; font-weight: 600;
+    font-size: 12.5px;
+    font-weight: 600;
     color: var(--color-forest-dark);
     background-color: var(--color-sage);
-    padding: 4px 10px; border-radius: 999px;
+    padding: 4px 10px;
+    border-radius: 999px;
 }
 
 .rutin-syarat-judul {
     margin-top: 4px;
     font-family: var(--font-heading);
-    font-weight: 700; color: var(--color-forest);
+    font-weight: 700;
+    color: var(--color-forest);
     opacity: 1 !important;
     font-size: 15px !important;
 }
 
-.rutin-syarat { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 6px; }
+.rutin-syarat {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 6px;
+}
 
 .rutin-syarat li {
-    position: relative; padding-left: 24px;
-    font-size: 13.5px; line-height: 1.55; opacity: 0.88;
+    position: relative;
+    padding-left: 24px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    opacity: 0.88;
 }
 
 .rutin-syarat li::before {
-    content: "\2713"; position: absolute; left: 0; top: 0;
-    color: var(--color-forest); font-weight: 700;
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-forest);
+    font-weight: 700;
 }
 
 .rutin-link {
-    margin-top: auto; padding-top: 6px; width: fit-content;
-    color: var(--color-forest); font-weight: 700; font-size: 13.5px;
+    margin-top: auto;
+    padding-top: 6px;
+    width: fit-content;
+    color: var(--color-forest);
+    font-weight: 700;
+    font-size: 13.5px;
     transition: color 200ms ease;
 }
 
-.rutin-link:hover { color: var(--color-coral); }
-
-.rutin-wa {
-    display: inline-flex; align-items: center; gap: 8px;
-    margin-top: auto; padding: 10px 18px; border-radius: 999px;
-    background-color: #25D366; color: var(--color-white);
-    font-family: var(--font-heading); font-weight: 600; font-size: 13.5px;
-    width: fit-content;
-    box-shadow: 0 8px 18px rgba(37, 211, 102, 0.3);
-    transition: background-color 200ms ease, box-shadow 200ms ease;
+.rutin-link:hover {
+    color: var(--color-coral);
 }
 
-.rutin-wa:hover { background-color: var(--color-forest-dark); box-shadow: 0 12px 26px rgba(36, 71, 58, 0.35); }
-.rutin-wa svg { width: 16px; height: 16px; }
+.rutin-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background-color: #25d366;
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 13.5px;
+    width: fit-content;
+    box-shadow: 0 8px 18px rgba(37, 211, 102, 0.3);
+    transition:
+        background-color 200ms ease,
+        box-shadow 200ms ease;
+}
 
-.carousel { position: relative; overflow: hidden; margin: 0 auto; }
+.rutin-wa:hover {
+    background-color: var(--color-forest-dark);
+    box-shadow: 0 12px 26px rgba(36, 71, 58, 0.35);
+}
+
+.rutin-wa svg {
+    width: 16px;
+    height: 16px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
 
 .carousel-track {
-    display: flex; cursor: pointer; user-select: none;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
     touch-action: pan-y;
     transition: transform 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.carousel-slide { min-width: 100%; }
+.carousel-slide {
+    min-width: 100%;
+}
 
 .carousel-slide img {
-    width: 100%; height: 100%; object-fit: cover; display: block;
-    -webkit-user-drag: none; user-select: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 .carousel-btn {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    width: 34px; height: 34px; border-radius: 50%; border: none;
-    background-color: var(--color-white); color: var(--color-forest-dark);
-    font-size: 13px; display: flex; align-items: center; justify-content: center;
-    cursor: pointer; box-shadow: var(--shadow-soft);
-    transition: background-color 200ms ease, color 200ms ease; z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-white);
+    color: var(--color-forest-dark);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition:
+        background-color 200ms ease,
+        color 200ms ease;
+    z-index: 2;
 }
 
-.carousel-btn:hover { background-color: var(--color-coral-dark); color: var(--color-white); }
-.carousel-prev { left: 10px; }
-.carousel-next { right: 10px; }
+.carousel-btn:hover {
+    background-color: var(--color-coral-dark);
+    color: var(--color-white);
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
 
 .carousel-dots {
-    position: absolute; bottom: 10px; left: 0; right: 0;
-    display: flex; justify-content: center; gap: 6px; z-index: 2;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 2;
 }
 
 .carousel-dot {
-    width: 7px; height: 7px; border-radius: 4px; border: none; padding: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 4px;
+    border: none;
+    padding: 0;
     background-color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
-    transition: width 250ms ease, background-color 250ms ease;
+    transition:
+        width 250ms ease,
+        background-color 250ms ease;
 }
 
-.carousel-dot.is-active { background-color: var(--color-white); width: 18px; }
+.carousel-dot.is-active {
+    background-color: var(--color-white);
+    width: 18px;
+}
 
 .acara-overlay,
 .aktivitas-overlay {
-    position: fixed; inset: 0;
+    position: fixed;
+    inset: 0;
     background-color: rgba(41, 39, 34, 0.6);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    display: flex; align-items: center; justify-content: center;
-    padding: 24px; opacity: 0; visibility: hidden;
-    transition: opacity 250ms ease, visibility 250ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 250ms ease,
+        visibility 250ms ease;
     z-index: 2000;
 }
 
 .acara-overlay.active,
-.aktivitas-overlay.active { opacity: 1; visibility: visible; }
+.aktivitas-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
 
 .acara-modal {
-    position: relative; display: flex; flex-direction: column;
-    width: min(92vw, 760px); max-height: 88vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: min(92vw, 760px);
+    max-height: 88vh;
     background-color: var(--color-white);
     border: 1.5px solid var(--color-border);
     border-radius: var(--radius-lg);
-    overflow: hidden; box-shadow: var(--shadow-hover);
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
     transform: translateY(24px) scale(0.96);
     transition: transform 300ms ease;
 }
 
-.acara-overlay.active .acara-modal { transform: translateY(0) scale(1); }
-.acara-modal-scroll { overflow-y: auto; }
-.acara-modal-img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; cursor: zoom-in; }
-.acara-modal-body { padding: 30px 38px 40px; }
-.acara-modal-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.acara-overlay.active .acara-modal {
+    transform: translateY(0) scale(1);
+}
+
+.acara-modal-scroll {
+    overflow-y: auto;
+}
+
+.acara-modal-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.acara-modal-body {
+    padding: 30px 38px 40px;
+}
+
+.acara-modal-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
 
 .acara-modal-tag {
-    display: inline-block; background-color: var(--color-coral); color: var(--color-white);
-    font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-    padding: 4px 12px; border-radius: 999px;
+    display: inline-block;
+    background-color: var(--color-coral);
+    color: var(--color-white);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 999px;
 }
 
-.acara-modal-label { font-size: 13px; font-weight: 600; color: var(--color-forest); opacity: 0.7; }
-.acara-modal-body h3 { font-size: 28px; margin-bottom: 16px; }
-.acara-modal-isi p { opacity: 0.85; font-size: 15.5px; line-height: 1.85; margin-bottom: 14px; }
+.acara-modal-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-forest);
+    opacity: 0.7;
+}
+
+.acara-modal-body h3 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.acara-modal-isi p {
+    opacity: 0.85;
+    font-size: 15.5px;
+    line-height: 1.85;
+    margin-bottom: 14px;
+}
 
 .acara-modal-isi h4 {
-    font-family: var(--font-heading); color: var(--color-forest);
-    font-size: 17px; margin: 22px 0 10px;
+    font-family: var(--font-heading);
+    color: var(--color-forest);
+    font-size: 17px;
+    margin: 22px 0 10px;
 }
 
-.acara-modal-isi ul { padding-left: 22px; margin-bottom: 14px; }
-.acara-modal-isi li { opacity: 0.85; font-size: 15.5px; line-height: 1.8; }
+.acara-modal-isi ul {
+    padding-left: 22px;
+    margin-bottom: 14px;
+}
+
+.acara-modal-isi li {
+    opacity: 0.85;
+    font-size: 15.5px;
+    line-height: 1.8;
+}
 
 .acara-modal-gallery {
     display: grid;
@@ -265,44 +516,79 @@
 }
 
 .acara-modal-gallery img {
-    width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: var(--radius-md);
     cursor: zoom-in;
     box-shadow: var(--shadow-soft);
-    transition: box-shadow 200ms ease, transform 200ms ease;
+    transition:
+        box-shadow 200ms ease,
+        transform 200ms ease;
 }
 
-.acara-modal-gallery img:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
-.acara-modal-gallery-single { grid-template-columns: 1fr; max-width: 420px; }
+.acara-modal-gallery img:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.acara-modal-gallery-single {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+}
 
 @media (max-width: 500px) {
-    .acara-modal-gallery { grid-template-columns: repeat(2, 1fr); }
+    .acara-modal-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .acara-close {
-    position: absolute; top: 16px; right: 16px;
-    display: flex; align-items: center; justify-content: center;
-    width: 36px; height: 36px; border-radius: 50%;
-    background-color: var(--color-white); border: none;
-    font-size: 22px; line-height: 1; color: var(--color-dark);
-    cursor: pointer; box-shadow: var(--shadow-soft); z-index: 2;
-    transition: background-color 200ms ease, color 200ms ease;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--color-dark);
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    z-index: 2;
+    transition:
+        background-color 200ms ease,
+        color 200ms ease;
 }
 
-.acara-close:hover { background-color: var(--color-coral-dark); color: var(--color-white); }
+.acara-close:hover {
+    background-color: var(--color-coral-dark);
+    color: var(--color-white);
+}
 
 .aktivitas-modal {
-    position: relative; display: flex; flex-direction: column;
-    width: min(92vw, 700px); max-height: 88vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: min(92vw, 700px);
+    max-height: 88vh;
     background-color: var(--color-white);
     border: 1.5px solid var(--color-border);
     border-radius: var(--radius-lg);
-    overflow: hidden; box-shadow: var(--shadow-hover);
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
     transform: translateY(24px) scale(0.96);
     transition: transform 300ms ease;
 }
 
-.aktivitas-overlay.active .aktivitas-modal { transform: translateY(0) scale(1); }
+.aktivitas-overlay.active .aktivitas-modal {
+    transform: translateY(0) scale(1);
+}
 
 .aktivitas-modal-media {
     position: relative;
@@ -324,8 +610,16 @@
     overflow-y: auto;
 }
 
-.aktivitas-modal-body h3 { font-size: 24px; margin: 10px 0 12px; }
-.aktivitas-modal-body p { opacity: 0.85; font-size: 15px; line-height: 1.8; }
+.aktivitas-modal-body h3 {
+    font-size: 24px;
+    margin: 10px 0 12px;
+}
+
+.aktivitas-modal-body p {
+    opacity: 0.85;
+    font-size: 15px;
+    line-height: 1.8;
+}
 
 .aktivitas-modal-caption {
     display: block;
@@ -345,11 +639,16 @@
     padding: 24px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 250ms ease, visibility 250ms ease;
+    transition:
+        opacity 250ms ease,
+        visibility 250ms ease;
     z-index: 2600;
 }
 
-.img-lightbox-overlay.active { opacity: 1; visibility: visible; }
+.img-lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
 
 .img-lightbox-stage {
     position: relative;
@@ -401,22 +700,66 @@
 }
 
 @media (max-width: 900px) {
-    .acara-grid { grid-template-columns: 1fr 1fr; }
-    .rutin-grid { grid-template-columns: 1fr; max-width: 620px; margin: 0 auto; }
+    .acara-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rutin-grid {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 760px) {
-    .img-lightbox-overlay { gap: 8px; padding: 10px; }
-    .img-lightbox-prev, .img-lightbox-next { width: 40px; height: 40px; font-size: 12px; }
-    .img-lightbox-stage { width: min(74vw, 640px); height: min(60vh, 480px); }
-    .acara-grid { grid-template-columns: 1fr; }
-    .rutin-grid { grid-template-columns: 1fr; max-width: 620px; margin: 0 auto; }
+    .img-lightbox-overlay {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .img-lightbox-prev,
+    .img-lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .img-lightbox-stage {
+        width: min(74vw, 640px);
+        height: min(60vh, 480px);
+    }
+
+    .acara-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rutin-grid {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 700px) {
-    .acara-hero, .rutin-section { padding: 56px 20px; }
-    .acara-card figcaption { padding: 40px 20px 18px; }
-    .acara-modal-body { padding: 24px 22px 32px; }
-    .acara-modal-body h3 { font-size: 24px; }
-    .aktivitas-modal-body { padding: 22px 22px 28px; }
+
+    .acara-hero,
+    .rutin-section {
+        padding: 56px 20px;
+    }
+
+    .acara-card figcaption {
+        padding: 40px 20px 18px;
+    }
+
+    .acara-modal-body {
+        padding: 24px 22px 32px;
+    }
+
+    .acara-modal-body h3 {
+        font-size: 24px;
+    }
+
+    .aktivitas-modal-body {
+        padding: 22px 22px 28px;
+    }
 }

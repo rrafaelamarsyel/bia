@@ -1,13 +1,13 @@
 :root {
-    --color-cream: #FFF9ED;
-    --color-forest: #315B4B;
-    --color-sage: #A8BFA3;
-    --color-coral: #D9826B;
-    --color-coral-dark: #A6532E;
+    --color-cream: #fff9ed;
+    --color-forest: #315b4b;
+    --color-sage: #a8bfa3;
+    --color-coral: #d9826b;
+    --color-coral-dark: #a6532e;
     --color-dark: #292722;
     --color-forest-dark: #24473a;
     --color-white: #ffffff;
-    --color-border: #E7D8B4;
+    --color-border: #e7d8b4;
     --font-heading: "Baloo 2", system-ui, sans-serif;
     --font-body: "Inter", system-ui, sans-serif;
     --radius-md: 16px;
@@ -58,7 +58,9 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-heading);
     color: var(--color-forest);
     font-weight: 700;
@@ -122,7 +124,12 @@ h1, h2, h3 {
     font-size: 15px;
     border: 2px solid transparent;
     cursor: pointer;
-    transition: background-color 280ms ease, color 280ms ease, box-shadow 280ms ease, border-color 280ms ease, backdrop-filter 280ms ease;
+    transition:
+        background-color 280ms ease,
+        color 280ms ease,
+        box-shadow 280ms ease,
+        border-color 280ms ease,
+        backdrop-filter 280ms ease;
     white-space: nowrap;
     box-shadow: 0 6px 16px rgba(41, 39, 34, 0.1);
 }
@@ -140,7 +147,7 @@ h1, h2, h3 {
 }
 
 .btn-whatsapp {
-    background-color: #25D366;
+    background-color: #25d366;
     color: var(--color-white);
 }
 
@@ -321,7 +328,9 @@ h1, h2, h3 {
     cursor: pointer;
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    transition: box-shadow 220ms ease, transform 100ms ease;
+    transition:
+        box-shadow 220ms ease,
+        transform 100ms ease;
 }
 
 .why-card::before {
@@ -421,7 +430,9 @@ h1, h2, h3 {
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 250ms ease, visibility 250ms ease;
+    transition:
+        opacity 250ms ease,
+        visibility 250ms ease;
     z-index: 2000;
     padding: 24px;
 }
@@ -506,7 +517,10 @@ h1, h2, h3 {
     font-size: 16px;
     color: var(--color-forest);
     cursor: pointer;
-    transition: box-shadow 200ms ease, background-color 200ms ease, color 200ms ease;
+    transition:
+        box-shadow 200ms ease,
+        background-color 200ms ease,
+        color 200ms ease;
 }
 
 .lightbox-nav:hover {
@@ -532,7 +546,9 @@ h1, h2, h3 {
     color: var(--color-dark);
     cursor: pointer;
     box-shadow: var(--shadow-soft);
-    transition: background-color 200ms ease, color 200ms ease;
+    transition:
+        background-color 200ms ease,
+        color 200ms ease;
     z-index: 1;
 }
 
@@ -644,18 +660,43 @@ h1, h2, h3 {
 }
 
 @keyframes halamanMasuk {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes naikPelan {
-    from { opacity: 0; transform: translateY(26px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(26px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    body, .hero-text, .page-banner .container { animation: none; }
-    .reveal { opacity: 1; }
-    .reveal.is-visible { animation: none; }
+    html {
+        scroll-behavior: auto;
+    }
+
+    body,
+    .hero-text,
+    .page-banner .container {
+        animation: none;
+    }
+
+    .reveal {
+        opacity: 1;
+    }
+
+    .reveal.is-visible {
+        animation: none;
+    }
 }
